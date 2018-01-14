@@ -1,30 +1,38 @@
 package StepDefination;
 
-import java.util.concurrent.TimeUnit;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class FindOwners {
-	WebDriver w ;
-	String s = "C:\\dev\\Tools\\geckodriver.exe";
+	WebDriver w;
+	String Node;
 	
 	@Given("^Open Petclinic application$")
-	public void open_Petclinic_application()  {
-		System.setProperty("webdriver.gecko.driver", s);
-		w = new FirefoxDriver();
-		w.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	public void open_Petclinic_application() throws MalformedURLException  {
+		Node = "http://192.168.1.197:5555/wd/hub";
+		DesiredCapabilities cap = DesiredCapabilities.chrome();
+		cap.setBrowserName("chrome");
+		cap.setPlatform(Platform.WIN10);
+		
+		w = new RemoteWebDriver(new URL(Node), cap);
+		w.manage().window().maximize();
+	
 		  w.get("http://localhost:5050/");
 	}
 
 	@When("^I click on findowners$")
 	public void i_click_on_findowners() throws Throwable {
-		 w.findElement(By.linkText("Find owners")).click();
+		 w.findElement(By.partialLinkText("OWNERS")).click();
 	}
 
 	@Then("^It should go to findowners page$")
