@@ -10,6 +10,6 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features="Features", glue={"StepDefination"},  format = {"pretty", "html:target/Destination"} ) 
 
 
-public class Dashboard {
+public class DashboardTest {
 
 }
