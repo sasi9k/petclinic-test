@@ -1,3 +1,5 @@
+package com.izeal.petclinic.stepdefinitions;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -9,7 +11,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 
 
-public class WebPageTest {
+public class WebPage {
 
 		public static void main(String[]args) throws InterruptedException, MalformedURLException {
 			//System.setProperty("webdriver.chrome.driver","C:\\Users\\LAKSHMI NARAYANA\\Desktop\\desktop\\chromedriver_win32\\chromedriver.exe");
