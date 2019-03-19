@@ -22,7 +22,8 @@ public class FindOwners {
 		Node = "http://192.168.1.221:4444/wd/hub";
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
 		cap.setBrowserName("chrome");
-		cap.setPlatform(Platform.WIN10);
+		//cap.setPlatform(Platform.WIN10);
+		cap.setPlatform(Platform.LINUX);
 
 		w = new RemoteWebDriver(new URL(Node), cap);
 		w.manage().window().maximize();
