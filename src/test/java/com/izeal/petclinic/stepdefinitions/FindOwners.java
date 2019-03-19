@@ -19,7 +19,7 @@ public class FindOwners {
 	
 	@Given("^Open Petclinic application$")
 	public void open_Petclinic_application() throws MalformedURLException  {
-		Node = "http://192.168.1.197:5555/wd/hub";
+		Node = "http://192.168.1.221:4444/wd/hub";
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
 		cap.setBrowserName("chrome");
 		cap.setPlatform(Platform.WIN10);
@@ -27,7 +27,7 @@ public class FindOwners {
 		w = new RemoteWebDriver(new URL(Node), cap);
 		w.manage().window().maximize();
 	
-		  w.get("http://localhost:5050/");
+		  w.get("http://springpetclinic-env.kfqhm5ccsp.us-east-1.elasticbeanstalk.com/");
 	}
 
 	@When("^I click on findowners$")
