@@ -11,9 +11,9 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 
 
-public class WebPage {
+public class AddOwner {
 
-		public static void openApplication() throws InterruptedException, MalformedURLException {
+		public void addOwner() throws InterruptedException, MalformedURLException {
 			//System.setProperty("webdriver.chrome.driver","C:\\Users\\LAKSHMI NARAYANA\\Desktop\\desktop\\chromedriver_win32\\chromedriver.exe");
 			WebDriver driver;
 			String baseurl,nodeurl;
