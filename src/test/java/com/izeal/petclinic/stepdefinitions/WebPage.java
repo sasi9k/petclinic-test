@@ -13,7 +13,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class WebPage {
 
-		public static void main(String[]args) throws InterruptedException, MalformedURLException {
+		public static void openApplication() throws InterruptedException, MalformedURLException {
 			//System.setProperty("webdriver.chrome.driver","C:\\Users\\LAKSHMI NARAYANA\\Desktop\\desktop\\chromedriver_win32\\chromedriver.exe");
 			WebDriver driver;
 			String baseurl,nodeurl;
