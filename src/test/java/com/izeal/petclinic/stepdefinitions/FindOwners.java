@@ -16,17 +16,17 @@ import cucumber.api.java.en.When;
 public class FindOwners {
 	WebDriver w;
 	String Node;
-	
+
 	@Given("^Open Petclinic application$")
 	public void open_Petclinic_application() throws MalformedURLException  {
 		Node = "http://192.168.1.221:4444/wd/hub";
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
 		cap.setBrowserName("chrome");
-		cap.setPlatform(Platform.WIN10);
-		
+		cap.setPlatform(Platform.LINUX);
+
 		w = new RemoteWebDriver(new URL(Node), cap);
 		w.manage().window().maximize();
-	
+
 		  w.get("http://springpetclinic-env.kfqhm5ccsp.us-east-1.elasticbeanstalk.com/");
 	}
 
@@ -37,9 +37,9 @@ public class FindOwners {
 
 	@Then("^It should go to findowners page$")
 	public void it_should_go_to_findowners_page()  {
-	   
+
 	}
 
-	
+
 
 }
