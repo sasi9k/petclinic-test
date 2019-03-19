@@ -12,7 +12,7 @@ public class WebPageTest {
 		WebDriver driver;
 		String baseurl,nodeurl;
 		baseurl="http://springpetclinic-env.kfqhm5ccsp.us-east-1.elasticbeanstalk.com/";
-		nodeurl="http://192.168.1.221:4444/wd/hub"
+		nodeurl="http://192.168.1.221:4444/wd/hub";
 	        driver.get(baseurl);
 	        DesiredCapabilities capabilty= DesiredCapabilities.firefox();
 		capability.setBrowserName("firefox");
