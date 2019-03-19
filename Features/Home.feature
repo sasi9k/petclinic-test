@@ -1,3 +1,4 @@
+@home
 Feature: Outline 
 
 Background: Open the web browser 
@@ -7,3 +8,4 @@ Scenario: Checking the web page
 	When I click on findowners 
 	
 	Then It should go to findowners page
+	And Close the browser

@@ -40,6 +40,10 @@ public class FindOwners {
 	public void it_should_go_to_findowners_page()  {
 
 	}
+	@Then("^Close the browser$")
+	public void close_the_browser() throws Throwable {
+		w.quit();
+	}
 
 
 
