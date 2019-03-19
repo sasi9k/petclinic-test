@@ -29,8 +29,8 @@
 </dependency>
 </dependencies>
 <build>
-
-<plugin>
+<plugins>
+  <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-surefire-plugin</artifactId>
     <version>2.18.1</version>
@@ -42,8 +42,8 @@
           <exclude>**/*API.java</exclude>
         </excludes>
     </configuration>
-</plugin>
-
+  </plugin>
+</plugins>
 <!--
 <plugin>
   <groupId>org.apache.maven.plugins</groupId>
