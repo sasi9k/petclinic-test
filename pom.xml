@@ -36,6 +36,8 @@
     <version>2.18.1</version>
     <configuration>
         <excludes>
+          <exclude>DashboardTest.java</exclude>
+          <exclude>**/FindOwners.java</exclude>
           <exclude>**/*UI.java</exclude>
           <exclude>**/*API.java</exclude>
         </excludes>
