@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions
 			(features="Features", 
 			glue={"com.izeal.petclinic.stepdefinitions"}, 
-			format = {"pretty", "html:target/Destination"},
+			format = {"pretty","json:target/cucumber.json"},
 			tags = {"@addowner"}
 			) 
 
