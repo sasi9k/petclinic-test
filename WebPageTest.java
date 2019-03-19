@@ -8,29 +8,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class WebPageTest {
 	
 	public static void main(String[]args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\KARTHIKEYA\\Desktop\\selenium\\chromedriver_win32\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.get("http://springpetclinic-env.kfqhm5ccsp.us-east-1.elasticbeanstalk.com/");
+		//System.setProperty("webdriver.chrome.driver","C:\\Users\\KARTHIKEYA\\Desktop\\selenium\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver;
+		String baseurl,nodeurl;
+		baseurl="http://springpetclinic-env.kfqhm5ccsp.us-east-1.elasticbeanstalk.com/";
+		nodeurl="http://192.168.1.221:4444/wd/hub"
+	        driver.get(baseurl);
+	        DesiredCapabilities capabilty= DesiredCapabilities.firefox();
+		capability.setBrowserName("firefox");
+		capability.setPlateform(Platform.XP);
+		driver = new RemoteWebDriver(new URL(nodeurl),capability);
 		
 		
-		
-		String expectedTitle = "http://springpetclinic-env.kfqhm5ccsp.us-east-1.elasticbeanstalk.com/";
 		   
-		   //Actual Title
-		   String actualTitle = driver.getTitle();
+		 
 		   
-		   //Conditions
-		   if(actualTitle.equals(expectedTitle)){
-		   
-		   System.out.println("Title Matched");
-		   
-		   }else 
-		   {
-		   
-		   System.out.println("Title didn't match");
-		   }
-		   
-		   driver.manage().window().maximize();
+		  // driver.manage().window().maximize();
 		   
 		driver.findElement(By.xpath("//*[@id=\"main-navbar\"]/ul/li[2]/a")).click(); //Home page
 		System.out.println("click");
